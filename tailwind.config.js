@@ -20,14 +20,21 @@ export default {
     },
     extend: {
       colors: { //s1, s2 and s3 denote primary, secomdary and tertiary colours respectively
-        blue_s1: '',
-        blue_s2: '',
-        blue_s3: '',
-        //S1, S2, S3 are secondary colours; S4 Primary; S5 is a nultra-dark shade of green
+        blue_s1: '#0075FF',
+        blue_s2: '#C0DDFF',
+        blue_s3: '#012148',
+        
 
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin'),
+    require('@tailwindcss/typography'),
+    require('tailwind-scrollbar')({ nocompatible: true }),
+    require('@tailwindcss/forms')({
+    strategy: 'class' // only generate classes
+  })
+  ],
 }
 
